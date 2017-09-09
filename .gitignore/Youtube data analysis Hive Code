@@ -1,0 +1,21 @@
+1)Find out the top 5 categories in which the most number of videos are uploaded.
+Solution:- 
+hive> select category, count(videoid) as video_count from youtubedata where category<>'' group by category  order by video_count desc limit 5;    
+
+2)Find top 10 rated videos.
+Solution:- 
+hive> select videoid,category,rating from youtubedata where category<>'' order by rating desc limit 10;
+
+3)Find top 10 most viewed videos
+Solution:- 
+hive> select videoid,category,views from youtubedata where category<>'' order by views desc limit 10;
+
+
+4)Find top 10 rated videos in each category.
+Solution:- 
+select rs.category,rs.videoid,rs.rating from (select category,videoid,rating,dense_rank() over (partition by category order by rating desc) as rank from youtubedata) rs where rank<=10 and category!=' ' and rs.category<> ''; 
+
+5)Find top  10 most viewed videos in each category.
+Solution:- 
+select rs.category,rs.videoid,rs.views from (select category,videoid,views,dense_rank() over (partition by category order by views desc) as rank from youtubedata) rs where rank<=10 and category!=' ' and rs.category<> ''; 
+
