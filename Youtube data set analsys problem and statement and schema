@@ -1,0 +1,41 @@
+#: Youtube Data Analysis
+The Project is based on Youtube data. 
+
+ Industry: Social Media
+
+Data: available dataset with attributes like: 
+
+1 video ID : an 11-digit string, which is unique
+
+2 uploader : a string of the video uploader's username
+
+3 age : an integer number of days between the date when the video was uploaded and Feb.15, 2007 (YouTube's establishment)
+
+4 category : a string of the video category chosen by the uploader
+
+
+5 length : an integer number of the video length
+
+
+6 views : an integer number of the views
+
+7 rate : a float number of the video rate
+
+
+8 ratings : an integer number of the ratings
+
+9 comments : an integer number of the comments 
+
+10 related IDs : Related IDs up to 20 strings of the related video IDs 
+
+ Problem Statement: Problem Statement is to
+
+1)     Find out the top 5 categories in which the most number of videos are uploaded.
+
+2)     Find top 10 rated videos.
+
+3)     Find top 10 most viewed videos.
+
+4)     Find top 10 rated videos in each category.
+
+5)     Find top  10 most viewed videos in each category.
